@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Exercise 4</title>
+<script>
+    function Change(){
+        let bdColor =document.getElementById("bdColor").value;
+        let bdWidth=document.getElementById("bdWidth").value;
+        let brColor=document.getElementById("brColor").value;
+        let brWidth=document.getElementById("brWidth").value;
+        let paragraph= document.getElementById("text");
+        //Background
+        if(bdColor=="red")
+        {
+            paragraph.style.backgroundColor="red";
+        }
+        else if(bdColor=="blue")
+        {
+            paragraph.style.backgroundColor="blue";
+        }
+        else if(bdColor=="green")
+        {
+            paragraph.style.backgroundColor="green";
+        }
+        if(bdWidth!="")
+        {
+            paragraph.style.width=bdWidth+"px";
+        }
+        //Border
+        if(brColor=="red")
+        {
+            paragraph.style.borderColor="red";
+        }
+        else if(brColor=="blue")
+        {
+            paragraph.style.borderColor="blue";
+        }
+        else if(brColor=="green")
+        {
+            paragraph.style.borderColor="green";
+        }
+        if(brWidth!="")
+        {
+            paragraph.style.borderWidth=brWidth+"px";
+        }
+        
+        
+    }
+</script>
+
+</head>
+<body>
+
+<p style="background-color:red; border: black 5px solid; width: 100%;"  id="text">Paragraphs are used to create, well, paragraphs. The text get some automatic formatting, like ensuring its not a
+    the same line as some other piece of content.</p>
+<label>
+    Background Color:
+<input id="bdColor" type="text" value="" placeholder="Name of Color">
+</label>
+<br>
+<label>
+    Background Width:
+<input id="bdWidth" type="text" value="" placeholder="Size in px">
+</label>
+</br>
+<br>
+<label>
+    Border Color:
+<input id="brColor" type="text" value="" placeholder="Name of Color">
+</label>
+</br>
+<label>
+    Border Width:
+<input id="brWidth" type="text" value="" placeholder="Size in px">
+</label>
+</br>
+<button onclick= Change()>
+Apply</button>
+
+</body>
+</html>

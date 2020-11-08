@@ -1,0 +1,37 @@
+<head>
+    <title>Exercise2</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+let images= document.getElementById("iphone");
+let constant= ["iphone12.jpg", "iphone11.jpeg", "iphonexs.jpg", "iphone8.jpg", "iphone7.jpg"];//makes the size same for all
+let counter=0;
+
+document.getElementById("next").addEventListener("click", () => {
+    counter++;
+    if(counter>4){
+        counter=0;
+    }
+    images.src=""+constant[counter];
+
+});
+document.getElementById("back").addEventListener("click", () => {
+    counter--;
+    if(counter<0){
+        counter=4;
+    }
+        images.src= "" + constant[counter];
+    
+
+});
+
+});
+    </script>
+    
+</head>
+<body>
+    <h1>Iphones</h1>
+    <img src="iphone12.jpg" id="iphone" height="500" width="1200">
+    <br><button id="next">Next</button></br>
+    <button id="back">Previous</button>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<head>
+    <title>Exercise1</title>
+    <script>
+        function Validator(){
+    let x= document.getElementById("Password");
+    let y=document.getElementById("Verifer");
+    
+    if(x.value !== y.value){
+        alert("Password doesn't match");
+    }
+    else if(x.value.length<8)
+    {
+        alert("the passwords are not at least 8 characters long");
+    }
+
+}
+    </script>
+    
+</head>
+<body>
+     Password: <input id="Password" type="text">
+    <br>Re-type Password:<input id="Verifer" type="text"></br>
+   <br> <button onclick=Validator()>Validate</button></br>
+</body>
+</html>
